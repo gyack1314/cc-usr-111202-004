@@ -1,0 +1,84 @@
+{
+  "cases": [
+    {
+      "id": "x1",
+      "stratum": "stage-a",
+      "covariates": {
+        "age": 50,
+        "baseline": 8
+      },
+      "outcome": 1
+    },
+    {
+      "id": "x2",
+      "stratum": "stage-a",
+      "covariates": {
+        "age": 54,
+        "baseline": 9
+      },
+      "outcome": 0
+    },
+    {
+      "id": "x3",
+      "stratum": "stage-b",
+      "covariates": {
+        "age": null,
+        "baseline": 7
+      },
+      "outcome": 1
+    }
+  ],
+  "controls": [
+    {
+      "id": "c1",
+      "stratum": "stage-a",
+      "covariates": {
+        "age": 52,
+        "baseline": 8
+      },
+      "capacity": 1,
+      "outcome": 0
+    },
+    {
+      "id": "c2",
+      "stratum": "stage-a",
+      "covariates": {
+        "age": 49,
+        "baseline": 9
+      },
+      "capacity": 2,
+      "outcome": 1
+    },
+    {
+      "id": "c3",
+      "stratum": "stage-b",
+      "covariates": {
+        "age": 52,
+        "baseline": 7
+      },
+      "capacity": 1,
+      "outcome": 0
+    }
+  ],
+  "scales": {
+    "age": 10,
+    "baseline": 2
+  },
+  "cost_weights": {
+    "age": "2",
+    "baseline": "1"
+  },
+  "caliper_sets": [
+    {
+      "id": "tight",
+      "age": "1/2",
+      "baseline": "1/2"
+    },
+    {
+      "id": "wide",
+      "age": "1",
+      "baseline": "1"
+    }
+  ],
+  "k": 2
+}
